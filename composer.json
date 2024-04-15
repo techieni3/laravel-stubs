@@ -1,0 +1,57 @@
+{
+  "name": "techieni3/laravel-stubs",
+  "description": "Opinionated Laravel stubs",
+  "version": "1.0.0",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "role": "Developer",
+      "name": "Nitin Gaikwad",
+      "email": "niteen1593@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.3",
+    "laravel/framework": "^11.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.15",
+    "orchestra/testbench": "^9.0",
+    "pestphp/pest": "^2.0",
+    "phpstan/phpstan": "^1.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "TechieNi3\\LaravelStubs\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TechieNi3\\LaravelStubs\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "pint": "pint",
+    "test": "pest",
+    "test-coverage": "pest --coverage-html coverage",
+    "analyse": "phpstan analyse"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "TechieNi3\\LaravelStubs\\Providers\\StubsServiceProvider"
+      ]
+    }
+  }
+}
