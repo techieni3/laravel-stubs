@@ -43,11 +43,18 @@ final class StubsPublishCommand extends Command
         return self::SUCCESS;
     }
 
+    /**
+     * @param  Collection<int, SplFileInfo>  $files
+     * @return Collection<int, SplFileInfo>
+     */
     public function unpublished(Collection $files): Collection
     {
         return $files->reject(fn (SplFileInfo $file) => file_exists($this->targetPath($file)));
     }
 
+    /**
+     * @param  Collection<int, SplFileInfo>  $files
+     */
     public function publish(Collection $files): int
     {
         return $files->reduce(function (int $published, SplFileInfo $file) {
