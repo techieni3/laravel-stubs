@@ -2,7 +2,6 @@
   "name": "techieni3/laravel-stubs",
   "description": "Opinionated Laravel stubs",
   "keywords": ["dev"],
-  "version": "1.0.0",
   "type": "library",
   "license": "MIT",
   "authors": [
